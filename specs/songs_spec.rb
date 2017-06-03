@@ -10,6 +10,12 @@ def setup
       acdc: ["Back in Black", "Highway to Hell", "Thunderstruck"]
     }
         )
+  @pop = Songs.new( 
+    {
+      taylor_swift: ["Shake it Off", "Welcome to New York", "Blank Space"]
+    }
+      )
+  
   # @acdc = Songs.new("Back in Black", "Highway to Hell", "Thunderstruck")
 end
 
@@ -19,6 +25,10 @@ end
 
 def test_find_song
   assert_equal(@rock.artist[:acdc][1], @rock.find_song("Highway to Hell"))
+end
+
+def test_find_song_by_artist 
+
 end
 
 
