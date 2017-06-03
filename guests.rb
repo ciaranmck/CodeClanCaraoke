@@ -2,11 +2,11 @@ require('pry')
 
 class Guests
 
-def find_song(selection)
-  found_song = nil
-  for song in @taylorswift
-    found_song = song if 
-    song.song2() == selection
+  attr_reader :name, :credit
+
+  def intialize(name, credit)
+    @name = name
+    @credit = credit
   end
 
-  return found_song
+end
