@@ -2,38 +2,33 @@ require('pry')
 
 class Rooms
 
-  attr_accessor :guests, :songs, :pop
+  attr_accessor :room, :songs, :genres, :guests
 
-  def initialize(guests, songs, pop)
-    @guests = guests
+  def initialize(room, songs, genres, guests)
+    @room = room
     @songs = songs
-    @pop = pop
+    @genres = genres
+    @guests = guests
+    @payments = 0
   end
   # binding.pry
 
-  # def add_song(selection)
-  #     genres.each do
-  #       |artist, song|
-  #       for song in song 
-  #         if song == selection
-  #           songs << song
-  #         end
-  #         return songs
-  #       end
-  #     end
-  # end
-
   def add_song_to_room(selection)
-      pop.artist.each do
-        |artist, song|
-        for songselect in song 
-          if songselect == selection
-          end
-        end
-        songs << songselect
-        return songs
+      playlist = genres[1].find_song("Blank Space")
+      if playlist = selection
+        songs << playlist
       end
+      return songs
   end
+
+    def add_guests_to_room
+      for guest in guests
+          room << guest
+          return room
+      end  
+    end
+
+end
 
   # def find(selection)
   # found_song = nil
@@ -46,4 +41,3 @@ class Rooms
 
   # end
 
-end

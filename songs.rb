@@ -2,14 +2,6 @@ require("pry")
 
 class Songs
 
-  # attr_reader :song1, :song2, :song3
-
-  # def initialize(song1, song2, song3)
-  #   @song1 = song1
-  #   @song2 = song2
-  #   @song3 = song3
-  # end
-
   attr_reader :artist
 
   def initialize(artist)
